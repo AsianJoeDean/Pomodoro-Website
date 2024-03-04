@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {text-align: center; background-color: #6cf8f3; color: black;}
+        .timer { /* Added class for timer */
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .sign-out-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        .calendar-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="authForm">
+        <h2>CodeCrafter's POMODORO</h2>
+        <input type="email" placeholder="email" id="userEmail" class="input-field">
+        <input type="password" placeholder="password" id="userPassword" class="input-field">  <br><br>
+        <button class="button" id="signUpButton">Sign Up</button>
+        <button class="button" id="signInButton">Sign In</button>
+    </div>
+
+    <div id="secretContent" style="display: none;">
+        <div id="animalImageContainer"></div>
+        <h1>Pomodoro Timer</h1>
+        <div id="timer" class="timer"> <!-- Added class for timer -->
+            <span id="minutes">25</span>:<span id="seconds">00</span>
+        </div>
+        <button class="button" id="startButton">Start</button>
+        <button class="button" id="resetButton">Reset</button>
+        <div id="taskList" style="display: none;">
+            <input type="text" id="newTask" placeholder="New task" class="input-field">
+            <button class="button" id="addTaskButton">Add task</button>
+            <ul id="tasks"></ul>
+        </div>
+        <div id="calendarContainer" style="display: none;">
+            <input type="date" id="calendar" class="input-field">
+        </div>
+        <label for="bgColor">Choose a background color:</label>
+        <input type="color" id="bgColor">
+        <label for="animalSelect">Choose an animal:</label>
+        <select id="animalSelect">
+            <option value="">--Please choose an animal--</option>
+            <option value="cat">Cat</option>
+            <option value="dog">Dog</option>
+            <option value="bunny">bunny</option>
+            <!-- Add more options as needed -->
+        </select>
+
+        <div id="animalImageContainer"></div>
+
+        <!-- Your Pomodoro timer here -->
+        <button class="button sign-out-button" id="signOutButton">Sign Out</button>
+        <button class="button calendar-button" id="calendarButton" style="display: none;">Calendar</button>
+        
+    </div>
+
+    <script type="module" src="index.js" defer></script>
+</body>
+</html>
