@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="calendarStyle.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <style>
+    
+  </style>
+  <title>Pomodoro Calendar</title>
+</head>
+<body>
+
+<div>
+    <!--Displays buttons to navigate to the timer and login page-->
+    <button class="button" id="timerButton">Timer</button>
+    <button class="button" id="singOutButton">Sign Out</button>
+    <h2>Pomodoro Calendar</h2>
+</div>
+
+<!--Displays a calendar for March 2024-->
+<h2>March 2024</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sun</th>
+      <th>Mon</th>
+      <th>Tue</th>
+      <th>Wed</th>
+      <th>Thu</th>
+      <th>Fri</th>
+      <th>Sat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td>11</td>
+        <td>12</td>
+        <td>13</td>
+        <td>14</td>
+        <td>15</td>
+        <td>16</td>
+        <td>17</td>
+    </tr>
+    <tr>
+        <td>18</td>
+        <td>19</td>
+        <td>20</td>
+        <td>21</td>
+        <td>22</td>
+        <td>23</td>
+        <td>24</td>
+    </tr>
+    <tr>
+        <td>25</td>
+        <td>26</td>
+        <td>27</td>
+        <td>28</td>
+        <td>29</td>
+        <td>30</td>
+        <td>31</td>
+    </tr>
+  </tbody>
+</table>
+
+<!--Has the input fields for a task and the day which the task is tied to-->
+<div>
+    <input type="text" id="taskInput" class="input-field" placeholder="Type your task here...">
+    <input type="date" name="dateandYear" id="dateandYear">
+    <button class="button" onclick="addTask()">Add task</button>
+</div>
+
+<ul id="taskList">
+    <!--The users tasks will be added here in an unordered format-->
+</ul>
+
+<script>
+//Function that adds the users tasks
+function addTask() {
+    var taskInput = document.getElementById("taskInput");
+    var taskText = taskInput.value.trim();
+    var dateInput = document.getElementById("dateandYear");
+    var dateText = dateInput.value.trim();
+
+    if (taskText !== "") {
+        var li = document.createElement("li");
+        li.innerHTML = dateText + ": " + taskText + '<button class="deleteButton" onclick="deleteTask(this)">Delete</button>';
+
+        document.getElementById("taskList").appendChild(li);
+
+        taskInput.value = "";
+    } else {
+        alert("Please enter a task!");
+    }
+}
+
+//Function that deletes a user's task
+function deleteTask(task) {
+    var li = task.parentNode;
+    li.parentNode.removeChild(li);
+}
+</script>
+
+</body>
+</html>

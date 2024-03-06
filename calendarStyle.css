@@ -1,0 +1,76 @@
+table {
+    width: 100%;
+  }
+  
+  th, td {
+    
+    padding: 32px;
+    text-align: center;
+  }
+
+  th {
+      border: 1px solid black;
+      padding: 16px;
+      background-color: tomato;
+      color: black;
+      text-align: center;
+  }
+
+  td {
+      border: 1px solid black;
+      background-color: #fff;
+      color: black;
+  }
+
+  body {
+      background-color: mediumseagreen;
+      font-family: Arial, sans-serif;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+  }
+
+  h2 {
+      font-size: 50px;
+  }
+
+  .button {
+    font-size: 20px;
+    font-family: myFont, Helvetica;
+    padding: .5em, 1em;
+    margin: 0.25em;
+    border-radius: 1em;
+    border: none;
+    outline: none;
+    width: 190px;
+    height: 50px;
+    position: relative
+  }
+
+  .timerButton {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .signOutButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .deleteButton {
+    margin: 10px;
+    padding: 10px;
+    background-color: red;
+    color: white;
+  }
+
+  .input-field {
+    width: 200px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
