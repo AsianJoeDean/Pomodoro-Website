@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8401c6b07e.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    
+    <!--Code for the sidebar that lets the user navigate to different features-->
+    <div class="header">
+        <div class="side-nav">
+            <div class="user">
+                <div>
+                    <h2 class="fa-solid fa-user">Pomodoro Website</h2>
+                    <p>by Code Crafters</p>
+                </div>
+            </div>
+            <ul>
+                <li id="icons" class="fa-solid fa-clock"><p>Timer</p></li>
+                
+            </ul>
+            <ul>
+                <li id="icons" class="fa-solid fa-music"><p>Music Player</p></li>
+            </ul>
+            <ul>
+                <li id="icons" class="fa-solid fa-gamepad"><p>Games</p></li>
+            </ul>
+            <ul>
+                <li id="icons" class="fa-solid fa-star"><p>Achievements</p></li>
+            </ul>
+            <ul>
+                <li id="logout" class="fa-solid fa-door-open"><p>Log Out</p></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--Code for the calendar-->
+    <div class="wrapper">
+        <header>
+            <p class="current-date">March 2024</p>
+            <div class="icons">
+                <span id="prev" class="fa-solid fa-arrow-left"></span>
+                <span id="next" class="fa-solid fa-arrow-right"></span>
+            </div>
+        </header>
+        <div class="calendar">
+            <ul class="weeks">
+                <li>Sun</li>
+                <li>Mon</li>
+                <li>Tue</li>
+                <li>Wed</li>
+                <li>Thu</li>
+                <li>Fri</li>
+                <li>Sat</li>
+            </ul>
+            <ul class="days">
+                <!--The calendar will be created when the page loads-->
+            </ul>
+        </div>
+    </div>
+
+    <!--Code where the user creates a task list-->
+    <div class="taskList">
+        <input type="text" id="input-field" class="input-field" placeholder="Type your task here...">
+    </div>
+
+    <div class="dateInput">
+    <input type="date" name="dateandYear" id="dateandYear">
+    </div>
+
+    <div class="buttonField">
+        <button class="button" onclick="addTask()">Add Task</button>
+    </div>
+    
+    <ul id="tasksList">
+            <!--Tasks will be added here by the user dynamically-->
+    </ul>
+
+    <!--Code for the area where notifications will popup-->
+    <div id="notifBar">
+        
+    </div>
+</body>
+</html>
